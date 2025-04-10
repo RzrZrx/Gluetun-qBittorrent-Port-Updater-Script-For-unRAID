@@ -106,4 +106,3 @@ The script will now run automatically after each successful VPN connection, ensu
 
 ## License
 
-(Optional: Add a license if you wish, e.g., MIT License)
