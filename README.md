@@ -100,8 +100,8 @@ The script will now run automatically after each successful VPN connection, ensu
     *   Ensure the qBittorrent API endpoint (`/api/v2/app/setPreferences`) is correct for your version.
 
 ## 
-[Visit Unraid Support forum]([https://www.google.com](https://forums.unraid.net/topic/184411-guide-automate-qbittorrent-port-updates-with-gluetun-vpn-client-on-unraid-683-and-above/
-)
+[Guide: Automate qBittorrent Port Updates with Gluetun VPN Client on Unraid](https://forums.unraid.net/topic/184411-guide-automate-qbittorrent-port-updates-with-gluetun-vpn-client-on-unraid-683-and-above/)
+
 
 ## Acknowledgements
 
