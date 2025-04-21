@@ -29,7 +29,7 @@ https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blo
 ## Setup Instructions
 ### 1. Create Necessary Directories
 ```bash
-/user/appdata/gluetun/scripts/
+/mnt/user/appdata/gluetun/scripts/
 ```
 
 ### 2. Update the Script
