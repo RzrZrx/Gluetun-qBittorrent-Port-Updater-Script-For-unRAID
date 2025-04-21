@@ -123,7 +123,7 @@ Then verify that qBittorrent has received the new port:
 2. Go to Tools > Options > Connection and check that the Listening Port reflects 12345.
 3. Optional) For further testing, manually change the port to a different random number, run the script again, and confirm the port updates accordingly.
 
-
+---
 
 ## How the Script Works
 
