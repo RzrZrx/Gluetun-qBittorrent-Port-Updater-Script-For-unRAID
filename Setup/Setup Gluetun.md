@@ -101,9 +101,9 @@ Container Path: `/gluetun/auth/`
 Host Path: `/mnt/user/appdata/gluetun/auth/`  
 Default Value:  
 Access Mode: `Read/Write`  
-Description: Specifies the file path for the HTTP control server authentication  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration. This path should point to a file containing credentials  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or auth settings used to secure the control server...
+Description: `Specifies the file path for the HTTP control server authentication  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration. This path should point to a file containing credentials  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or auth settings used to secure the control server...`
 
 
 **qBittorrent WebUI Port**  
