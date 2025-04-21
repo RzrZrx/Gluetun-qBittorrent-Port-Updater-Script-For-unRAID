@@ -188,4 +188,6 @@ else
 fi
 
 echo "Script finished."
+echo "Execute the script in the Gluetun VPN Client Console after a qBittorrent update with:"
+echo "/bin/sh /tmp/gluetun/update_qbittorrent_listening_port.sh"
 exit 0
