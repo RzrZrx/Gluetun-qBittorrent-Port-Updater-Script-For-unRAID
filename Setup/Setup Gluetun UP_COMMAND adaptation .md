@@ -20,9 +20,7 @@ https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blo
 ### Variables to Set
 - `PORT_FORWARD_ONLY`
 - `VPN_PORT_FORWARDING`
-- `PORT_FORWARDING_STATUS_FILE`
 - `VPN_PORT_FORWARDING_UP_COMMAND`
-- `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH`
 - `qBittorrent WebUI Port`
 - `Chromium WebUI Port`
 
@@ -112,19 +110,18 @@ See the [Gluetun Docker template screenshot](https://github.com/RzrZrx/Gluetun-q
 ### 5. Set Executable Permissions
 Run the following command in the Gluetun VPN Client Console:
 ```bash
-chmod +x /tmp/gluetun/update_qbittorrent_listening_port.sh
+chmod +x /gluetun/scripts/update_qb_port.sh
 ```
 
 ### 6. Test the Script
 Execute the script in the Gluetun VPN Client Console:
 ```bash
-/bin/sh /tmp/gluetun/update_qbittorrent_listening_port.sh
+/gluetun/scripts/update_qb_port.sh 12345
 ```
-
-### 7. Verify qBittorrent Port Update
+Then verify that qBittorrent has received the new port:
 1. Open the qBittorrent WebUI.
-2. Navigate to **Tools > Options > Connection** and confirm the Listening Port has updated.
-3. To test, manually set the port to a random number, run the script, and verify the port updates.
+2. Go to Tools > Options > Connection and check that the Listening Port reflects 12345.
+3. Optional) For further testing, manually change the port to a different random number, run the script again, and confirm the port updates accordingly.
 
 ## How the Script Works
 1. **Setup and Configuration**  
