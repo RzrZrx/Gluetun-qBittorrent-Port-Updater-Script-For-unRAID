@@ -24,5 +24,8 @@ Access the Chromium WebUI at:
 - **Access Mode**: Read/Write
 - **Description**: Specifies the directory for storing downloads made through the Chromium browser. By default, downloads are saved in `/mnt/user/downloads_array/chromium/` on the host system.
 
+### Access the qBittorrent WebUI at: 
+- **`<your-device-IP>:3000/`**
+
 ### Docker Template Screenshot
 ![Chromium Docker Template](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/img/chromium_template.png)
