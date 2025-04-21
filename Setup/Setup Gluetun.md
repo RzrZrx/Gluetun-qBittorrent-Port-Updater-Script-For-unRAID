@@ -62,11 +62,11 @@ Add the following environment variables to the Gluetun Docker template (enable A
 
 **PORT_FORWARD_ONLY**  
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Config `Type: Variable`  
-&nbsp;&nbsp;&nbsp;&nbsp;Name: `PORT_FORWARD_ONLY`  
-&nbsp;&nbsp;&nbsp;&nbsp;Key: `PORT_FORWARD_ONLY`  
-&nbsp;&nbsp;&nbsp;&nbsp;Value: `true`  
-&nbsp;&nbsp;&nbsp;&nbsp;Description: Selects servers that support port forwarding.  
+Config `Type: Variable`  
+Name: `PORT_FORWARD_ONLY`  
+Key: `PORT_FORWARD_ONLY`  
+Value: `true`  
+Description: Selects servers that support port forwarding.  
 ```
 
 **VPN_PORT_FORWARDING**  
