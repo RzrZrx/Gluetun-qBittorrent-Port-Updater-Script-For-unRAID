@@ -13,7 +13,7 @@ echo "Script created by Unraid user Zerax (Reddit user u/Snowbreath)"
 
 # Set constants
 GLUETUN_PORT=8000                   # Default Gluetun control server port
-QBITTORRENT_PORT=8081               # Default qBittorrent WebUI port
+QBITTORRENT_PORT=8080               # Default qBittorrent WebUI port
 
 # qBittorrent WebUI Credentials
 QBITTORRENT_USERNAME="your_qBittorrent_control_user" # Replace with your qBittorrent username
