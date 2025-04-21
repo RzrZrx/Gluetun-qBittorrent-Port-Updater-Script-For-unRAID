@@ -14,4 +14,5 @@
 
 ### Reference
 - Below is a screenshot of the qBittorrent Docker template for reference:
-![Screenshot of the qBittorrent Docker template](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/img/qBittorrent_template.png)
+
+[Screenshot of the qBittorrent Docker template](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/img/qBittorrent_template.png)
