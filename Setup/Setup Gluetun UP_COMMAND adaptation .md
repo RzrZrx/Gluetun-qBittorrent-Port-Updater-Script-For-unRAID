@@ -1,4 +1,4 @@
-# Gluetun and qBittorrent Port Synchronization Script for Gluetun v4.0.0 release
+## Gluetun and qBittorrent Port Synchronization Script for Gluetun v4.0.0 release
 
 This script automates the synchronization of the VPN forwarded port from Gluetun with qBittorrent's listening port in an UnRaid environment. It eliminates manual port configuration and optimizes torrent connectivity for VPN providers like PIA or ProtonVPN.
 
