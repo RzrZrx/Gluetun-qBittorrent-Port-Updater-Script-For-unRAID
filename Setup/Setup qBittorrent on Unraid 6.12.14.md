@@ -8,7 +8,7 @@ This guide provides instructions for setting up qBittorrent on Unraid 6, integra
 ### Enable Advanced View
 - Turn on Advanced view in the qBittorrent template to access additional settings.
 - WebUI: `<your-device-IP>:<port>/`    
-  Example: `http://192.168.1.10:8585/` (as used in the template)
+  Example: `http://192.168.1.10:3000/` (as used in the default lscr.io/linuxserver/chromium template)
 
 ### Docker Network Configuration
 - **Network Type**: Set to `None`
