@@ -123,7 +123,7 @@ Then verify that qBittorrent has received the new port:
 2. Go to Tools > Options > Connection and check that the Listening Port reflects 12345.
 3. Optional) For further testing, manually change the port to a different random number, run the script again, and confirm the port updates accordingly.
 
-## How the Script (v1.1.6+) Works
+## How the Script Works
 
 The script leverages Gluetun's `VPN_PORT_FORWARDING_UP_COMMAND` feature to automatically update qBittorrent's listening port. Here's a step-by-step breakdown of its operation:
 
