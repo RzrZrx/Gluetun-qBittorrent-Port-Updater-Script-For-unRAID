@@ -6,7 +6,7 @@ This document outlines the configuration for running Chromium in a Docker contai
 
 ### Enable Advanced View
 - Turn on Advanced view in the qBittorrent template to access additional settings.
-- WebUI: `<your-device-IP>:8080/`    
+- WebUI: `<your-device-IP>:3000/`    
 
 ### Docker Network Configuration
 - **Network Type**: Set to `None`
