@@ -60,6 +60,8 @@ password = "mypassword"
 ### 4. Set Up Gluetun VPN Client  
 Add the following environment variables to the Gluetun Docker template (enable Advanced view):
 
+WebUI: `http://[IP]:[PORT:8000]/v1/openvpn/portforwarded`
+
 **PORT_FORWARD_ONLY**  
 Config Type: `Variable`  
 Name: `PORT_FORWARD_ONLY`  
@@ -107,7 +109,6 @@ Host Port: `3000`
 Connection Type: `TCP`  
 Description: `Configures the port used by the Chromium-based web user interface. The default port is 3000 with TCP connection type.`  
 
-WebUI: `http://[IP]:[PORT:8000]/v1/openvpn/portforwarded`
 
 See the [Gluetun Docker template screenshot](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/raw/main/Setup/img/GluetunVPN_template.png) for reference.
 
