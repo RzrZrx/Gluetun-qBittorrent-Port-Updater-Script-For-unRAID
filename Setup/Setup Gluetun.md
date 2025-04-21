@@ -61,11 +61,11 @@ password = "mypassword"
 Add the following environment variables to the Gluetun Docker template (enable Advanced view):
 
 **PORT_FORWARD_ONLY**  
-Config `Type: Variable`  
+Config Type: `Variable`  
 Name: `PORT_FORWARD_ONLY`  
 Key: `PORT_FORWARD_ONLY`  
 Value: `true`  
-Description: Selects servers that support port forwarding.  
+Description: `Selects servers that support port forwarding.`  
 
 
 **VPN_PORT_FORWARDING**  
