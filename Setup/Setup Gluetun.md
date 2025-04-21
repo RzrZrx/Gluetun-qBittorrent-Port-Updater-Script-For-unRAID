@@ -85,26 +85,27 @@ Access Mode: `Read/Write`
 Description: `Defines the file path where the forwarded port number is written. By default, it is located at /tmp/gluetun/forwarded_port, with read/write access.`  
 
 **VPN_PORT_FORWARDING_UP_COMMAND**  
-Config Type: `Variable`
+Config Type: `Variable`  
 Name: `VPN_PORT_FORWARDING_UP_COMMAND`  
 Key: `VPN_PORT_FORWARDING_UP_COMMAND`  
 Value: `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`  
 Default Value:  
-Description: `/Command to execute after VPN connection and port forwarding.`  
+Description: `Specifies the command to execute after the VPN connection is established and port forwarding is configured.`  
 
 **qBittorrent WebUI Port**  
-&nbsp;&nbsp;&nbsp;&nbsp;Config Type: Port  
-&nbsp;&nbsp;&nbsp;&nbsp;Container Port: `8080`  
-&nbsp;&nbsp;&nbsp;&nbsp;Host Port: `8080`  
-&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: TCP  
-&nbsp;&nbsp;&nbsp;&nbsp;Description: Port for qBittorrent’s WebUI.  
+Config Type: `Port`  
+Container Port: `8080`  
+Host Port: `8080`  
+Default Value:  
+Connection Type: `TCP`  
+Description: `Configures the port used by qBittorrent’s web user interface. The default port is 8080 with TCP connection type.`  
 
 **Chromium WebUI Port**  
-&nbsp;&nbsp;&nbsp;&nbsp;Config Type: Port  
-&nbsp;&nbsp;&nbsp;&nbsp;Container Port: `3000`  
-&nbsp;&nbsp;&nbsp;&nbsp;Host Port: `3000`  
-&nbsp;&nbsp;&nbsp;&nbsp;Connection Type: TCP  
-&nbsp;&nbsp;&nbsp;&nbsp;Description: Port for Chromium-based WebUI.
+Config Type: Port  
+Container Port: `3000`  
+Host Port: `3000`  
+Connection Type: `TCP`  
+Description: `Configures the port used by the Chromium-based web user interface. The default port is 3000 with TCP connection type.`  
 
 WebUI: `http://[IP]:[PORT:8000]/v1/openvpn/portforwarded`
 
