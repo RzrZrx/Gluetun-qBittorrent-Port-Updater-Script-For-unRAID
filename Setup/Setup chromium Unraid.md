@@ -2,11 +2,12 @@
 
 This document outlines the configuration for running Chromium in a Docker container on Unraid 6.12.14, integrated with GluetunVPN.
 
-## WebUI
-Access the Chromium WebUI at:  
-`http://192.168.1.10:3000/`
-
 ## Docker Configuration
+
+### Enable Advanced View
+- Turn on Advanced view in the qBittorrent template to access additional settings.
+- WebUI: `<your-device-IP>:8080/`    
+
 
 ### Docker Network Configuration
 - **Network Type**: Set to `None`
@@ -24,7 +25,7 @@ Access the Chromium WebUI at:
 - **Access Mode**: Read/Write
 - **Description**: Specifies the directory for storing downloads made through the Chromium browser. By default, downloads are saved in `/mnt/user/downloads_array/chromium/` on the host system.
 
-### Access the qBittorrent WebUI at: 
+### Access the Chromium WebUI at: 
 - **`<your-device-IP>:3000/`**
 
 ### Docker Template Screenshot
