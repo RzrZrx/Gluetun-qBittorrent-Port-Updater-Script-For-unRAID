@@ -7,7 +7,7 @@ This guide provides instructions for setting up qBittorrent on Unraid 7, integra
 
 ### Enable Advanced View
 - Turn on the **Advanced view** in the qBittorrent Docker template to access additional configuration options.
-- WebUI: `http://<your-device-IP>:8080/`
+- WebUI: `<your-device-IP>:8080/`
 
 ### Network Settings
 - **Container Network**: GluetunVPN
