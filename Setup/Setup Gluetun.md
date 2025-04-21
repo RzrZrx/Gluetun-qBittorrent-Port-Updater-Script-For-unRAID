@@ -39,8 +39,8 @@ Replace placeholder credentials and ports in the script:
 # --- START USER CONFIGURATION ---
 
 # Set constants
-GLUETUN_PORT=8000                   # Default Gluetun control server port
-QBITTORRENT_PORT=8081               # Default qBittorrent WebUI port
+GLUETUN_PORT=8000                                             # Default Gluetun control server port
+QBITTORRENT_PORT=8081                                         # Default qBittorrent WebUI port
 
 # qBittorrent WebUI Credentials
 QBITTORRENT_USERNAME="your_qBittorrent_control_user"          # Username for qBittorrent authentication
