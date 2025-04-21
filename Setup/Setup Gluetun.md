@@ -142,7 +142,7 @@ chmod +x /tmp/gluetun/update_qbittorrent_listening_port.sh
 ### 6. Test the Script
 Execute the script in the Gluetun VPN Client Console:
 ```bash
-/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh
+/bin/sh /tmp/gluetun/update_qbittorrent_listening_port.sh
 ```
 
 ### 7. Verify qBittorrent Port Update
