@@ -121,8 +121,8 @@ Execute the script in the Gluetun VPN Client Console:
 Then verify that qBittorrent has received the new port:
 1. Open the qBittorrent WebUI.
 2. Go to Tools > Options > Connection and check that the Listening Port reflects 12345.
-3. Optional) For further testing, manually change the port to a different random number, run the script again, and confirm the port updates accordingly.
-
+3. (Optional) For further testing, manually change the port to a different random number, run the script again, and confirm the port updates accordingly.
+4. Restart Gluetun — the port will update automatically.
 ---
 
 ## How the Script Works
