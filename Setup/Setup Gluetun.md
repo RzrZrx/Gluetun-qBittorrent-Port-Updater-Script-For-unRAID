@@ -101,9 +101,7 @@ Container Path: `/gluetun/auth/`
 Host Path: `/mnt/user/appdata/gluetun/auth/`  
 Default Value:  
 Access Mode: `Read/Write`  
-Description: `Specifies the file path for the HTTP control server authentication  
-configuration. This path should point to a file containing credentials  
-or auth settings used to secure the control server...`
+Description: `Specifies the file path to the HTTP control server authentication configuration. This path should point to a config.toml file containing authentication settings used by the control server.`
 
 
 **qBittorrent WebUI Port**  
