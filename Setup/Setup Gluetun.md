@@ -65,26 +65,32 @@ Config Type: `Variable`
 Name: `PORT_FORWARD_ONLY`  
 Key: `PORT_FORWARD_ONLY`  
 Value: `true`  
-Description: `Selects servers that support port forwarding.`  
-
+Default Value:  
+Description: `Set to true to select servers with port forwarding only`  
 
 **VPN_PORT_FORWARDING**  
-&nbsp;&nbsp;&nbsp;&nbsp;Config `Type: Variable` 
-&nbsp;&nbsp;&nbsp;&nbsp;Key: `VPN_PORT_FORWARDING`  
-&nbsp;&nbsp;&nbsp;&nbsp;Value: `on`  
-&nbsp;&nbsp;&nbsp;&nbsp;Description: Enables port forwarding on the VPN server.  
+Config `Type: Variable`  
+Name: `VPN_PORT_FORWARDING`  
+Key: `VPN_PORT_FORWARDING`  
+Value: `on`  
+Default Value:  
+Description: `Enables or disables port forwarding on the VPN server. Defaults to off but can be set to on for activation.`  
 
 **PORT_FORWARDING_STATUS_FILE**  
-&nbsp;&nbsp;&nbsp;&nbsp;Config Type: Path  
-&nbsp;&nbsp;&nbsp;&nbsp;Container Path: `/tmp/gluetun`  
-&nbsp;&nbsp;&nbsp;&nbsp;Host Path: `/mnt/user/appdata/gluetun/listening_port/`  
-&nbsp;&nbsp;&nbsp;&nbsp;Access Mode: Read/Write  
-&nbsp;&nbsp;&nbsp;&nbsp;Description: File path for the forwarded port number.  
+Config Type: `Path`  
+Container Path: `/tmp/gluetun`  
+Host Path: `/mnt/user/appdata/gluetun/listening_port/`  
+Default Value:  
+Access Mode: `Read/Write`  
+Description: `Defines the file path where the forwarded port number is written. By default, it is located at /tmp/gluetun/forwarded_port, with read/write access.`  
 
 **VPN_PORT_FORWARDING_UP_COMMAND**  
-&nbsp;&nbsp;&nbsp;&nbsp;Key: `VPN_PORT_FORWARDING_UP_COMMAND`  
-&nbsp;&nbsp;&nbsp;&nbsp;Value: `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`  
-&nbsp;&nbsp;&nbsp;&nbsp;Description: Command to execute after VPN connection and port forwarding.  
+Config Type: `Variable`
+Name: `VPN_PORT_FORWARDING_UP_COMMAND`  
+Key: `VPN_PORT_FORWARDING_UP_COMMAND`  
+Value: `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`  
+Default Value:  
+Description: `/Command to execute after VPN connection and port forwarding.`  
 
 **qBittorrent WebUI Port**  
 &nbsp;&nbsp;&nbsp;&nbsp;Config Type: Port  
