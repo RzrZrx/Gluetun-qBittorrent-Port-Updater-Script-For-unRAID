@@ -8,13 +8,9 @@ This document outlines the configuration for running Chromium in a Docker contai
 - Turn on Advanced view in the qBittorrent template to access additional settings.
 - WebUI: `<your-device-IP>:8080/`    
 
-
 ### Docker Network Configuration
 - **Network Type**: Set to `None`
-- **Extra Parameters**: Include `--net=container:GluetunVPN` to route qBittorrent traffic through the GluetunVPN container.
-  ```
-  --shm-size=1gb --net=container:GluetunVPN
-  ```
+- **Extra Parameters**: Include `--shm-size=1gb --net=container:GluetunVPN` to route qBittorrent traffic through the GluetunVPN container.
 
 ### Storage Configuration
 - **Config Type**: Path
