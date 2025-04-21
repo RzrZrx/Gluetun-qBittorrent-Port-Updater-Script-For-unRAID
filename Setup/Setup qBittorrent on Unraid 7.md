@@ -13,7 +13,7 @@ This guide provides instructions for setting up qBittorrent on Unraid 7, integra
 - **Container Network**: GluetunVPN
 - **Network Type**: Container
 
-### Access the qBittorrent WebUI at 
+### Access the qBittorrent WebUI at: 
 - **`<your-device-IP>:8080/`**
 
 ### Docker Template Screenshot
