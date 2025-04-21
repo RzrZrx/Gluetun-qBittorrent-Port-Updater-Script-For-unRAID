@@ -1,8 +1,15 @@
 #!/bin/sh
 
-# Script created by Unraid user Zerax (Reddit user u/Snowbreath).
-# Modified with debugging and authentication fixes.
-echo "Script created by Unraid user Zerax (Reddit user u/Snowbreath)"
+# Gluetun-qBittorrent Port Updater Script for unRAID
+#
+# Created by:     Unraid user Zerax (Reddit: u/Snowbreath, GitHub: RzrZrx)
+# Repository:     https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID
+# Version:        1.0.0
+# Last Updated:   2025-04-21
+# Description:    Automatically updates qBittorrent's port based on Gluetun VPN's assigned port.
+# Notes:          Includes debugging and authentication fixes.
+
+echo "Script created by Unraid user Zerax (Reddit: u/Snowbreath, GitHub: RzrZrx)"
 
 # Before running the script, ensure it has executable permissions.
 # Use the following command inside the Gluetun VPN Client Console terminal
