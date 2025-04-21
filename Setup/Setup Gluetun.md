@@ -22,6 +22,8 @@ This script automates the synchronization of the VPN forwarded port from Gluetun
 - `PORT_FORWARDING_STATUS_FILE`
 - `VPN_PORT_FORWARDING_UP_COMMAND`
 - `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH`
+- `qBittorrent WebUI Port`
+- `Chromium WebUI Port`
 
 ## Setup Instructions
 ### 1. Create Necessary Directories
