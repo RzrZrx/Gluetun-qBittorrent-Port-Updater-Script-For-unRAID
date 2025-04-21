@@ -36,13 +36,11 @@ https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/tre
 ### 2. Update the Script
 Replace placeholder credentials and ports in the script:
 ```bash
-QBITTORRENT_USERNAME="myusername"  # Username for qBittorrent authentication
-QBITTORRENT_PASSWORD="mypassword"  # Password for qBittorrent authentication
-GLUETUN_USERNAME="myusername"      # Username for Gluetun authentication
-GLUETUN_PASSWORD="mypassword"      # Password for Gluetun authentication
-GLUETUN_PORT=8000                  # Default port for Gluetun
-QBITTORRENT_PORT=8080              # Default port for qBittorrent
-LOOPBACK_ADDRESS="127.0.0.1"       # Default loopback address
+# --- START USER CONFIGURATION ---
+
+# Set constants
+GLUETUN_PORT=8000                   # Default Gluetun control server port
+QBITTORRENT_PORT=8081               # Default qBittorrent WebUI port
 
 # qBittorrent WebUI Credentials
 QBITTORRENT_USERNAME="your_qBittorrent_control_user"          # Username for qBittorrent authentication
@@ -52,6 +50,7 @@ QBITTORRENT_PASSWORD="your_qBittorrent_control_password"      # Password for qBi
 GLUETUN_USERNAME="your_gluetun_control_user"                  # Username for Gluetun authentication
 GLUETUN_PASSWORD="your_gluetun_control_password"              # Password for Gluetun authentication
 
+# --- START USER CONFIGURATION ---
 ```
 Save the script to:
 ```
