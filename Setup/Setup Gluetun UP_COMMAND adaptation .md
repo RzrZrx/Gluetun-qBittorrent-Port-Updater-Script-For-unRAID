@@ -133,7 +133,7 @@ The script leverages Gluetun's `VPN_PORT_FORWARDING_UP_COMMAND` feature to autom
     *   Gluetun replaces the `{{PORTS}}` placeholder with the actual forwarded port number(s) (e.g., `36276`) before running the script. The script is executed as: `/gluetun/scripts/update_qb_port.sh <port_number>`.
 
 2.  **Initialization:**
-    *   **Log Version:** The script first logs its hardcoded version number (e.g., `Running Script Version: 1.1.6`) for diagnostic purposes.
+    *   **Log Version:** The script first logs its hardcoded version number (e.g., `Running Script Version: 1.0.0`) for diagnostic purposes.
     *   **Read Port Argument:** It reads the port number passed by Gluetun from the first command-line argument (`$1`). If Gluetun were to pass multiple comma-separated ports, the script currently extracts and uses only the *first* one.
     *   **Validate Port:** It checks if the extracted port is a valid number.
 
@@ -142,7 +142,7 @@ The script leverages Gluetun's `VPN_PORT_FORWARDING_UP_COMMAND` feature to autom
     *   If `curl` is not found, it attempts to install it using the Alpine package manager (`apk add --no-cache curl`). It will exit if `apk` is not found or if the installation fails.
 
 4.  **Wait for qBittorrent:**
-    *   The script needs to communicate with the qBittorrent WebUI. It attempts to connect to the address configured in the script (e.g., `http://127.0.0.1:8585`, which assumes qBittorrent is using Gluetun's network stack).
+    *   The script needs to communicate with the qBittorrent WebUI. It attempts to connect to the address configured in the script (e.g., `http://127.0.0.1:8080`, which assumes qBittorrent is using Gluetun's network stack).
     *   It uses `curl --head` in a loop, checking periodically until the qBittorrent WebUI becomes responsive or a timeout (`WAIT_TIMEOUT`) is reached. This handles cases where qBittorrent might start slower than Gluetun.
 
 5.  **qBittorrent Authentication:**
