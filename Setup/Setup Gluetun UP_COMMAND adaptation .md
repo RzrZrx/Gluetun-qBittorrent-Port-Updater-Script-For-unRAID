@@ -29,8 +29,7 @@ https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blo
 ## Setup Instructions
 ### 1. Create Necessary Directories
 ```bash
-/user/appdata/gluetun/auth
-/user/appdata/gluetun/listening_port
+/user/appdata/gluetun/scripts/
 ```
 
 ### 2. Update the Script
@@ -39,36 +38,20 @@ Replace placeholder credentials and ports in the script:
 # --- START USER CONFIGURATION ---
 
 # Set constants
-GLUETUN_PORT=8000                                             # Default Gluetun control server port
 QBITTORRENT_PORT=8080                                         # Default qBittorrent WebUI port
 
 # qBittorrent WebUI Credentials
 QBITTORRENT_USERNAME="your_qBittorrent_control_user"          # Username for qBittorrent authentication
 QBITTORRENT_PASSWORD="your_qBittorrent_control_password"      # Password for qBittorrent authentication
 
-# Gluetun Control Server Credentials (if you set HTTP_CONTROL_SERVER_USER/PASSWORD)
-GLUETUN_USERNAME="your_gluetun_control_user"                  # Username for Gluetun authentication
-GLUETUN_PASSWORD="your_gluetun_control_password"              # Password for Gluetun authentication
-
-# --- START USER CONFIGURATION ---
+# --- END USER CONFIGURATION ---
 ```
 Save the script to:
 ```
-/user/appdata/gluetun/listening_port/update_qbittorrent_listening_port.sh
+/mnt/user/appdata/gluetun/scripts/update_qb_port.sh
 ```
 
-### 3. Create a Config File
-Create `/user/appdata/gluetun/auth/config.toml` with:
-```toml
-[[roles]]
-name = "qbittorrent"
-routes = ["GET /v1/openvpn/portforwarded"]
-auth = "basic"
-username = "myusername"
-password = "mypassword"
-```
-
-### 4. Set Up Gluetun VPN Client  
+### 3. Set Up Gluetun VPN Client  
 Add the following environment variables to the Gluetun Docker template (enable Advanced view):
 
 WebUI: `http://[IP]:[PORT:8000]/v1/openvpn/portforwarded`
@@ -89,21 +72,14 @@ Value: `on`
 Default Value:  
 Description: `Enables or disables port forwarding on the VPN server. Defaults to off but can be set to on for activation.`  
 
-**PORT_FORWARDING_STATUS_FILE**  
-Config Type: `Path`  
-Container Path: `/tmp/gluetun`  
-Host Path: `/mnt/user/appdata/gluetun/listening_port/`  
-Default Value:  
-Access Mode: `Read/Write`  
-Description: `Defines the file path where the forwarded port number is written. By default, it is located at /tmp/gluetun/forwarded_port, with read/write access.`  
 
 **VPN_PORT_FORWARDING_UP_COMMAND**  
 Config Type: `Variable`  
 Name: `VPN_PORT_FORWARDING_UP_COMMAND`  
 Key: `VPN_PORT_FORWARDING_UP_COMMAND`  
-Value: `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`  
+Value: `/gluetun/scripts/update_qb_port.sh {{PORTS}}`  
 Default Value:  
-Description: `Specifies the command to execute after the VPN connection is established and port forwarding is configured.`  
+Description: `Specifies the custom script to execute when a new VPN port is forwarded. This script updates qBittorrent with the new port. Ensure the script is properly mounted inside the container and made executable. Replace {{PORTS}} with the forwarded port number automatically passed by Gluetun.` 
 
 **HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH**
 Config Type: `Path`  
