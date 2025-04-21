@@ -60,7 +60,7 @@ password = "mypassword"
 ### 4. Set Up Gluetun VPN Client  
 Add the following environment variables to the Gluetun Docker template (enable Advanced view):
 
-**PORT_FORWARD_ONLY**
+**PORT_FORWARD_ONLY**  
 &nbsp;&nbsp;&nbsp;&nbsp;Config `Type: Variable`  
 &nbsp;&nbsp;&nbsp;&nbsp;Name: `PORT_FORWARD_ONLY`  
 &nbsp;&nbsp;&nbsp;&nbsp;Key: `PORT_FORWARD_ONLY`  
