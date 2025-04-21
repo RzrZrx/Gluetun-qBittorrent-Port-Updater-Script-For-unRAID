@@ -19,7 +19,7 @@ This document outlines the configuration for running Chromium in a Docker contai
 - **Config Type**: Path
 - **Name**: Chromium Download Folder
 - **Container Path**: `/config/Downloads`
-- **Host Path**: `<your-device:path>`  
+- **Host Path**: `<your-host-path>`  
   Example: `/mnt/user/downloads_array/chromium/` (this is just a sample path; use one that fits your setup)
 - **Default Value**: (None)
 - **Access Mode**: Read/Write
