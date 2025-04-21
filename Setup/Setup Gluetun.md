@@ -68,10 +68,10 @@ Name: `PORT_FORWARD_ONLY`
 Key: `PORT_FORWARD_ONLY`  
 Value: `true`  
 Default Value:  
-Description: `Set to true to select servers with port forwarding only`  
+Description: `Set to true to select servers with port forwarding only.`  
 
 **VPN_PORT_FORWARDING**  
-Config `Type: Variable`  
+Config Type: `Variable`  
 Name: `VPN_PORT_FORWARDING`  
 Key: `VPN_PORT_FORWARDING`  
 Value: `on`  
@@ -93,6 +93,15 @@ Key: `VPN_PORT_FORWARDING_UP_COMMAND`
 Value: `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`  
 Default Value:  
 Description: `Specifies the command to execute after the VPN connection is established and port forwarding is configured.`  
+
+Config Type: `Path`
+Name: `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH`
+Container Path: `/gluetun/auth/`
+Host Path: `/mnt/user/appdata/gluetun/auth/`
+Default Value:
+Access Mode: `Read/Write`  
+Description: >`Specifies the file path for the HTTP control server authentication configuration. This path should point to a file containing credentials or auth settings used to secure the control server. The container accesses this file at /gluetun/auth/, which maps to the host path /mnt/user/appdata/gluetun/auth/. Ensure the file exists and is properly configured.`
+
 
 **qBittorrent WebUI Port**  
 Config Type: `Port`  
