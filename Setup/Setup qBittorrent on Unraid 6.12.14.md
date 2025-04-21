@@ -12,7 +12,5 @@
 - **Network Type**: Set to `None`.
 - **Extra Parameters**: Include `--net=container:GluetunVPN` to route qBittorrent traffic through the GluetunVPN container.
 
-### Reference
-- Below is a screenshot of the qBittorrent Docker template for reference:
-
+### Docker Template Screenshot
 ![Screenshot of the qBittorrent Docker template](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/img/qBittorrent_template.png)
