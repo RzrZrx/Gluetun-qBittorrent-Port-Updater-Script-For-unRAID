@@ -17,8 +17,8 @@ This document outlines the configuration for running Chromium in a Docker contai
 - **Config Type**: Path
 - **Name**: Chromium Download Folder
 - **Container Path**: `/config/Downloads`
-- **Host Path**: `<your-device:parh>` 
-  Example: `/mnt/user/downloads_array/chromium/` as used in the in the template.
+- **Host Path**: `<your-device:parh>`  
+  Example: `/mnt/user/downloads_array/chromium/` (as used in the in the template.)
 - **Default Value**: (None)
 - **Access Mode**: Read/Write
 - **Description** Specifies the directory for storing downloads made through the Chromium browser. By default, downloads are saved inside the Docker container at /mnt/config/Downloads, but this can be mapped to a custom path on the array for easier access. For example, on the host system, downloads can be stored in a directory like /mnt/user/downloads_array/chromium/
