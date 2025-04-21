@@ -1,7 +1,7 @@
 # qBittorrent Setup on Unraid 6.12.14
 
 ## Overview
-This guide provides instructions for setting up qBittorrent on Unraid 7, integrated with GluetunVPN, including environment variables and network configuration.
+This guide provides instructions for setting up qBittorrent on Unraid 6, integrated with GluetunVPN, including environment variables and network configuration.
 
 ## Configuration
 
