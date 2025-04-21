@@ -41,7 +41,7 @@ QBITTORRENT_PASSWORD="mypassword"  # Password for qBittorrent authentication
 GLUETUN_USERNAME="myusername"      # Username for Gluetun authentication
 GLUETUN_PASSWORD="mypassword"      # Password for Gluetun authentication
 GLUETUN_PORT=8000                  # Default port for Gluetun
-QBITTORRENT_PORT=8585              # Default port for qBittorrent
+QBITTORRENT_PORT=8080              # Default port for qBittorrent
 LOOPBACK_ADDRESS="127.0.0.1"       # Default loopback address
 ```
 Save the script to:
