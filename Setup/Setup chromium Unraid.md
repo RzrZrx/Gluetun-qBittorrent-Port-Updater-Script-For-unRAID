@@ -8,9 +8,9 @@ Access the Chromium WebUI at:
 
 ## Docker Configuration
 
-### Network
-- **Network Type**: None
-- **Extra Parameters**:  
+### Docker Network Configuration
+- **Network Type**: Set to `None`
+- **Extra Parameters**: Include `--net=container:GluetunVPN` to route qBittorrent traffic through the GluetunVPN container.
   ```
   --shm-size=1gb --net=container:GluetunVPN
   ```
