@@ -59,30 +59,36 @@ password = "mypassword"
 
 ### 4. Set Up Gluetun VPN Client
 Add the following environment variables to the Gluetun Docker template (enable Advanced view):
+
 - **PORT_FORWARD_ONLY**  
   - Key: `PORT_FORWARD_ONLY`
   - Value: `true`
   - Description: Selects servers that support port forwarding.
+
 - **VPN_PORT_FORWARDING**  
   - Key: `VPN_PORT_FORWARDING`
   - Value: `on`
   - Description: Enables port forwarding on the VPN server.
+
 - **PORT_FORWARDING_STATUS_FILE**  
   - Config Type: Path
   - Container Path: `/tmp/gluetun`
   - Host Path: `/mnt/user/appdata/gluetun/listening_port/`
   - Access Mode: Read/Write
   - Description: File path for the forwarded port number.
+
 - **VPN_PORT_FORWARDING_UP_COMMAND**  
   - Key: `VPN_PORT_FORWARDING_UP_COMMAND`
   - Value: `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`
   - Description: Command to execute after VPN connection and port forwarding.
+
 - **qBittorrent WebUI Port**  
   - Config Type: Port
   - Container Port: `8080`
   - Host Port: `8080`
   - Connection Type: TCP
   - Description: Port for qBittorrent’s WebUI.
+
 - **Chromium WebUI Port**  
   - Config Type: Port
   - Container Port: `3000`
