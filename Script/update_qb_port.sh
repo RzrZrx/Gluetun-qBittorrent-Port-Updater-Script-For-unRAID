@@ -12,7 +12,7 @@
 
 # --- Log Version (Simplified) ---
 # Manually set the version here - MUST MATCH the '# Version:' line above
-SCRIPT_VERSION="1.1.9"
+SCRIPT_VERSION="1.0.0"
 echo "--- Gluetun-qBittorrent Port Updater Script ---"
 echo "Running Script Version: $SCRIPT_VERSION"
 echo "Created by: Unraid user Zerax (Reddit: u/Snowbreath, GitHub: RzrZrx)"
