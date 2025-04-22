@@ -35,7 +35,7 @@ Please read the **Security Considerations** section carefully before implementin
 ### 1. Configure Gluetun Container
 Edit your Gluetun Docker container settings in Unraid (enable Advanced View):
 
-**A. Add/Set Environment Variables:**
+**Add/Set Environment Variables:**
 Add or ensure the following **Variables** are set:
 
 *   **`VPN_PORT_FORWARDING`**
@@ -67,10 +67,10 @@ Add or ensure the following **Variables** are set:
     *   **IMPORTANT:** Replace `8080` in the chosen command value with **your actual qBittorrent WebUI port**.
     *   **Description:** `REQUIRED: Executes this command when a port is forwarded. {{PORTS}} is automatically replaced by Gluetun.`
 
-**B. No Script Mount Needed:**
+**No Script Mount Needed:**
 *   Unlike the script-based method, you **do not** need to configure any Path mounts for script files.
 
-**C. Apply Changes:**
+**Apply Changes:**
 Save the changes to your Gluetun container configuration. Gluetun will likely restart.
 
 ## Verification
