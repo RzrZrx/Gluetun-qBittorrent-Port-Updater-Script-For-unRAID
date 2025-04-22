@@ -45,6 +45,13 @@ Add or ensure the following **Variables** are set:
     *   **Value:** `on`
     *   **Description:** `REQUIRED: Enables port forwarding feature in Gluetun.`
 
+*   **`PORT_FORWARD_ONLY`** (Optional but Recommended)
+    *   **Config Type:** `Variable`
+    *   **Name:** `PORT_FORWARD_ONLY`
+    *   **Key:** `PORT_FORWARD_ONLY`
+    *   **Value:** `true`
+    *   **Description:** `OPTIONAL: Instructs Gluetun to only connect to VPN servers that support port forwarding.`
+
 *   **`VPN_PORT_FORWARDING_UP_COMMAND`**
     *   **Config Type:** `Variable`
     *   **Name:** `VPN_PORT_FORWARDING_UP_COMMAND`
@@ -59,13 +66,6 @@ Add or ensure the following **Variables** are set:
         ```
     *   **IMPORTANT:** Replace `8080` in the chosen command value with **your actual qBittorrent WebUI port**.
     *   **Description:** `REQUIRED: Executes this command when a port is forwarded. {{PORTS}} is automatically replaced by Gluetun.`
-
-*   **`PORT_FORWARD_ONLY`** (Optional but Recommended)
-    *   **Config Type:** `Variable`
-    *   **Name:** `PORT_FORWARD_ONLY`
-    *   **Key:** `PORT_FORWARD_ONLY`
-    *   **Value:** `true`
-    *   **Description:** `OPTIONAL: Instructs Gluetun to only connect to VPN servers that support port forwarding.`
 
 **B. No Script Mount Needed:**
 *   Unlike the script-based method, you **do not** need to configure any Path mounts for script files.
