@@ -55,9 +55,9 @@ Add or ensure the following **Variables** are set:
         ```
     *   **Value (Using `curl` - alternative if `wget` is missing):**
         ```bash
-        sh -c 'curl -sS --fail --retry 6 --retry-connrefused --header "Referer: http://127.0.0.1:8585" --data-urlencode "json={\"listen_port\":{{PORTS}}}" "http://127.0.0.1:8585/api/v2/app/setPreferences" || echo "qBittorrent port update via curl failed (exit code $?)"'
+        sh -c 'curl -sS --fail --retry 6 --retry-connrefused --header "Referer: http://127.0.0.1:8080" --data-urlencode "json={\"listen_port\":{{PORTS}}}" "http://127.0.0.1:8585/api/v2/app/setPreferences" || echo "qBittorrent port update via curl failed (exit code $?)"'
         ```
-    *   **IMPORTANT:** Replace `8585` in the chosen command value with **your actual qBittorrent WebUI port**.
+    *   **IMPORTANT:** Replace `8080` in the chosen command value with **your actual qBittorrent WebUI port**.
     *   **Description:** `REQUIRED: Executes this command when a port is forwarded. {{PORTS}} is automatically replaced by Gluetun.`
 
 *   **`PORT_FORWARD_ONLY`** (Optional but Recommended)
