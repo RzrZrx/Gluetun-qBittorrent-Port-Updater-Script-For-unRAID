@@ -2,7 +2,8 @@
 
 This guide explains how to automatically synchronize the VPN forwarded port from Gluetun with qBittorrent's listening port using **only** Gluetun's `VPN_PORT_FORWARDING_UP_COMMAND` environment variable, without needing a separate script file.
 
-**This method REQUIRES enabling the "Bypass authentication for clients on localhost" option in qBittorrent.** Please read the **Security Considerations** section carefully before implementing this method.
+**This method REQUIRES enabling the "Bypass authentication for clients on localhost" option in qBittorrent.** 
+Please read the **Security Considerations** section carefully before implementing this method.
 
 ## Benefits
 
