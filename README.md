@@ -15,7 +15,8 @@ This ensures qBittorrent is always configured to use the correct, currently acti
 
 ## Script Link
 
-*   **Script:** [`update_qb_port.sh`](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Script/update_qb_port.sh) *(This guide assumes v1.1.6 or later)*
+*   **Script:** [`update_qb_port.sh`](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Script/update_qb_port.sh) *(This guide assumes v1.0.0 or later)*
+
 
 ## Key Requirement: Network Mode
 
