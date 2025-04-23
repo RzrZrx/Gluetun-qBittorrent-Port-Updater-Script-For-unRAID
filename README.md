@@ -28,7 +28,7 @@ This network setup is typically achieved in Docker (or Unraid's template) by:
 
 ---
 
-**For detailed setup instructions, please see the project Wiki:**
+**For detailed setup instructions, please see the project Wiki:**  
 **[https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/wiki](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/wiki)**
 
 ---
