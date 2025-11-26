@@ -197,7 +197,7 @@ In your Gluetun Docker settings, add a new **Path**:
 *   **Value:** `/bin/sh -c /tmp/gluetun/update_qbittorrent_listening_port.sh`
 *   **Description:** Specifies the command to execute whenever the port forwarding status is updated.
 
-### 2. Port Mappings (Add these to GLUETUN)
+### 4. Port Mappings (Add these to GLUETUN)
 Since qBittorrent is attached to Gluetun's network, you must define the WebUI ports **inside the Gluetun container settings**, not qBittorrent.
 
 **qBittorrent WebUI Port:**
