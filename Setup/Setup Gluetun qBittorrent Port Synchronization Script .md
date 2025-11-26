@@ -23,6 +23,29 @@ This script automates the process of updating qBittorrent's listening port when 
 *   A **qBittorrent** container.
 *   Port Forwarding enabled in your VPN provider settings.
 
+### Variables to Set
+- `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH` (Optional – Recommended)
+- `HTTP_CONTROL_SERVER_AUTH_DEFAULT_ROLE` (Optional – Alternative)
+- `PORT_FORWARD_ONLY`
+- `VPN_PORT_FORWARDING`
+- `VPN_PORT_FORWARDING_UP_COMMAND`
+- `PORTSYNC_QB_USERNAME`
+- `PORTSYNC_QB_PASSWORD`
+- `PORTSYNC_INTERNAL_ADDRESS`
+- `PORTSYNC_GT_PORT`
+- `PORTSYNC_QB_PORT`
+- `PORTSYNC_GT_USERNAME`(Optional – Recommended)
+- `PORTSYNC_GT_PASSWORD`(Optional – Recommended)
+- `PORTSYNC_GT_API_KEY`(Optional – Alternative)
+- `PORTSYNC_TIMEOUT`
+- `PORTSYNC_DEBUG`
+- `qBittorrent WebUI Port`
+- `WebBrowser WebUI Port` (Optional)  
+
+### Path to Set
+- `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH` (Optional – Recommended)
+- `PORT_FORWARDING_STATUS_FILE`
+
 ## Step 1: Save the Script
 1.  Download the script file (`update_qbittorrent_listening_port.sh`).
 2.  Save it to a persistent location on your server (e.g., `/mnt/user/appdata/gluetun/scripts/`).
