@@ -47,6 +47,8 @@ This script automates the process of updating qBittorrent's listening port when 
 - `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH` (Optional – Recommended)
 - `PORT_FORWARDING_STATUS_FILE`
 
+---
+
 ## Step 1: Save the Script
 1.  Download the script file (`update_qbittorrent_listening_port.sh`).
 2.  Save it to a persistent location on your server (e.g., `/mnt/user/appdata/gluetun/scripts/`).
@@ -65,6 +67,8 @@ Use the following command inside the Gluetun VPN Client Console:
 ```bash
 chmod +x /tmp/gluetun/update_qbittorrent_listening_port.sh
 ```
+
+---
 
 ## Step 3: Gluetun Docker Configuration
 
@@ -147,7 +151,9 @@ auth = "apikey"
 apikey = "5HuQ3QpsZ7o6XKbawtvgvEY"
 ```
 
-**2. Mount the Config File**
+---
+
+### 1. Mount the Config File
 In your Gluetun Docker settings, add a new **Path**:
 *   **Config Type:** Path
 *   **Name:** `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH`
@@ -155,8 +161,6 @@ In your Gluetun Docker settings, add a new **Path**:
 *   **Host Path:** `/mnt/user/appdata/gluetun/auth/`
 *   **Access:** Read Only
 *   **Description:** Defines the path where Gluetun finds the config.toml file
-
----
 
 ### 2. Add Script & Status Mappings
 
