@@ -3,6 +3,11 @@
 # Gluetun -> qBittorrent Listening Port Auto-Updater
 # Version: 3.8-T (Timeout Protection)
 #
+# Created by:     RzrZrx (https://github.com/RzrZrx)
+# Unraid user:    Zerax (https://forums.unraid.net/profile/176709-zerax)
+#
+# Repository:     https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID
+#
 # Description:    Automatically updates qBittorrent's listening port by fetching
 #                 it from the Gluetun API.
 #
