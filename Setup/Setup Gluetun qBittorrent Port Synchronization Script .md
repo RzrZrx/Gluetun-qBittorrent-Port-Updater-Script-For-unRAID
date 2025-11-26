@@ -21,7 +21,7 @@ This script automates the process of updating qBittorrent's listening port when 
 ## Prerequisites
 *   A **Gluetun** container (VPN Client).
 *   A **qBittorrent** container.
-*   Port Forwarding enabled in your VPN provider settings.
+*   Your VPN provider must support port forwarding, and it must be enabled in the settings.
 
 ### Variables to Set
 - `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH` (Optional – Recommended)
