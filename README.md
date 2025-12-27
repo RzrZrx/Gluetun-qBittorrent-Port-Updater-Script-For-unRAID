@@ -16,7 +16,7 @@ This ensures qBittorrent is always configured to use the correct, currently acti
 ## Script Link
 
 *   **Script:** [`update_qbittorrent_listening_port.sh`](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Script/update_qbittorrent_listening_port.sh) *(V3.8-T)*
-*   **Installation Guide:** [`Setup Gluetun qBittorrent Port Synchronization Script .md`](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/Setup%20Gluetun%20qBittorrent%20Port%20Synchronization%20Script%20.md) *(V3.8-T)*
+*   **Installation Guide:** [`Setup Gluetun qBittorrent Port Synchronization Script .md`](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/Setup%20Gluetun%20qBittorrent%20Port%20Synchronization%20Script.md) *(V3.8-T)*
 
 ## Key Requirement: Network Mode
 
@@ -28,5 +28,3 @@ For the script (using its default settings) to work correctly, your **qBittorren
 **[https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/wiki](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/Setup%20Gluetun%20qBittorrent%20Port%20Synchronization%20Script%20.md)**
 
 ---
-
-
