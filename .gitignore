@@ -1,0 +1,41 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.bak
+*.old
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Script Testing
+test_output/
+*.test
+
+# Backup Files
+*.backup
+*_backup
+backup/
