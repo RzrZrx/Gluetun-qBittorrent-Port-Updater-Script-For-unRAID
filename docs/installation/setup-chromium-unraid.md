@@ -7,7 +7,7 @@ This document outlines the configuration for running Chromium in a Docker contai
 ### Enable Advanced View
 - Turn on **Advanced View** in the Chromium template to access additional settings.
 - **WebUI**: `<your-device-IP>:<port>/`  
-  Example: `http://192.168.1.10:3000/` (as used in the template)
+  Example: `https://192.168.1.10:3001/` (as used in the template)
 
 ### Docker Network Configuration
 - **Network Type**: `None`
@@ -28,8 +28,10 @@ This document outlines the configuration for running Chromium in a Docker contai
 
 ### Access the Chromium WebUI at:
 - **`<your-device-IP>:<port>/`**  
-  Example: `http://192.168.1.10:3000/` (as used in the template)
+  Example: `https://192.168.1.10:3001/` (as used in the template)
 
+> [!IMPORTANT]
+> **Selkies KDE HTTPS Requirement**: If you're using Selkies KDE for the Chromium interface, the stream will **only work with HTTPS**. You must configure HTTPS access with SSL certificates (self-signed certificates work fine) for the stream to function properly. HTTP connections will not work with Selkies KDE.
 
 ### Docker Template Screenshot
 ![Chromium Docker Template](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/blob/main/Setup/img/chromium_template.png)
