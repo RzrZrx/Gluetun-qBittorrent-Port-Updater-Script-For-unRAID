@@ -1,0 +1,33 @@
+# Gluetun Control Server Authentication Configuration
+# File: /mnt/user/appdata/gluetun-nginx/auth/config.toml
+
+[[roles]]
+name = "qbittorrent"
+
+# List of ALL GET routes from the official Gluetun control server docs
+routes = [
+  # VPN
+  "GET /v1/vpn/status",
+  "GET /v1/vpn/settings",
+
+  # Port Forwarding
+  "GET /v1/portforward",
+
+  # DNS
+  "GET /v1/dns/status",
+
+  # Updater
+  "GET /v1/updater/status",
+
+  # Public IP
+  "GET /v1/publicip/ip"
+]
+
+auth = "basic"
+username = "my_gt_username"
+password = "my_gt_password"
+
+# You could add other roles below if needed for different users/scripts
+# [[roles]]
+# name = "another_role"
+# ...

@@ -99,7 +99,7 @@ Configure the path mapping as follows:
 - **Access Mode:** Read/Write
 - **Description:** (Optional) `Path to Gluetun authentication config`
 
-![Gluetun Path Mapping Configuration](file:///C:/Users/roger_stenersen.no/.gemini/antigravity/brain/1d2cae82-8964-4d72-a2d8-caf7b9b31da4/gluetun_path_mapping_config.png)
+<!-- Screenshot: Gluetun Path Mapping Configuration in Unraid Docker UI -->
 
 > **Note:** The **Name** field `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH` serves as both the path mapping name and the environment variable that Gluetun uses to locate the config file at `/gluetun/auth/config.toml`.
 

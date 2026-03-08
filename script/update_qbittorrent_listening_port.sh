@@ -1,7 +1,7 @@
 #!/bin/sh
 ###############################################################################
 # Gluetun -> qBittorrent Listening Port Auto-Updater
-# Version: 3.8-T (Timeout Protection)
+# Version: 3.9-F (File-First Port Reading)
 #
 # Created by:     RzrZrx (https://github.com/RzrZrx)
 # Unraid user:    Zerax (https://forums.unraid.net/profile/176709-zerax)
@@ -16,9 +16,10 @@
 #                 - CURL Timeouts (Prevents stalling on bad IPs)
 #                 - Secure credential handling
 #                 - Debug mode redirects to file
+#                 - File-first port reading (avoids API deadlock on newer Gluetun)
 ###############################################################################
 
-SCRIPT_VERSION="3.8-T"
+SCRIPT_VERSION="3.9-F"
 
 ###############################################################################
 # USER CONFIGURATION
@@ -61,11 +62,12 @@ WAIT_TIMEOUT="${PORTSYNC_TIMEOUT:-300}"
 DEBUG_MODE="${PORTSYNC_DEBUG:-false}"
 
 # Max time (in seconds) for a single curl request to wait before failing
-CURL_TIMEOUT=15
+CURL_TIMEOUT=30
 
 # File paths
 COOKIE_FILE="/tmp/qb_cookies.txt"
 DEBUG_LOG_FILE="/tmp/gluetun/portsync_debug.log"
+PORT_FILE="/tmp/gluetun/forwarded_port"
 
 ###############################################################################
 # COLORS
@@ -205,21 +207,38 @@ GLUETUN_IP_URL="http://$INTERNAL_IP:$GLUETUN_PORT/v1/publicip/ip"
 GLUETUN_PORT_URL="http://$INTERNAL_IP:$GLUETUN_PORT/v1/portforward"
 QB_HOST="http://$INTERNAL_IP:$QBITTORRENT_PORT"
 
-# Fetch Gluetun Data
-IP_JSON=$(fetch_gluetun_json "$GLUETUN_IP_URL" 2>/dev/null || echo "")
-PORT_JSON=$(fetch_gluetun_json "$GLUETUN_PORT_URL")
+# --- Fetch Forwarded Port ---
+# Strategy: Read from Gluetun's port file first (written before this script runs).
+# This avoids a deadlock in newer Gluetun versions where the API endpoint
+# blocks while the up-command script is running.
+# Falls back to the API for manual/standalone execution.
+LISTENING_PORT=""
 
-if [ -z "$PORT_JSON" ]; then
-    echo -e "${RED}ERROR: Could not retrieve forwarded port from Gluetun.${RESET}"
-    echo -e "${YELLOW}Check PORTSYNC_GT credentials or if port forwarding is enabled.${RESET}"
-    script_exit
+if [ -f "$PORT_FILE" ]; then
+    LISTENING_PORT=$(cat "$PORT_FILE" 2>/dev/null | tr -d '[:space:]')
+    if [ -n "$LISTENING_PORT" ]; then
+        echo -e "${GREEN}Read forwarded port from file: ${CYAN}${LISTENING_PORT}${RESET}"
+    fi
 fi
 
-# Parse Data
+if [ -z "$LISTENING_PORT" ]; then
+    echo -e "${YELLOW}Port file not found or empty, falling back to API...${RESET}"
+    PORT_JSON=$(fetch_gluetun_json "$GLUETUN_PORT_URL")
+
+    if [ -z "$PORT_JSON" ]; then
+        echo -e "${RED}ERROR: Could not retrieve forwarded port from Gluetun.${RESET}"
+        echo -e "${YELLOW}Check PORTSYNC_GT credentials or if port forwarding is enabled.${RESET}"
+        script_exit
+    fi
+
+    LISTENING_PORT=$(echo "$PORT_JSON" | jq -r .port 2>/dev/null)
+fi
+
+# --- Fetch Public IP Info (informational only, does not deadlock) ---
+IP_JSON=$(fetch_gluetun_json "$GLUETUN_IP_URL" 2>/dev/null || echo "")
 PUBLIC_IP=$(echo "$IP_JSON" | jq -r .public_ip 2>/dev/null || echo "N/A")
 REGION=$(echo "$IP_JSON" | jq -r .region 2>/dev/null || echo "N/A")
 TIMEZONE=$(echo "$IP_JSON" | jq -r .timezone 2>/dev/null || echo "N/A")
-LISTENING_PORT=$(echo "$PORT_JSON" | jq -r .port 2>/dev/null)
 
 # Validate Port
 if ! echo "$LISTENING_PORT" | grep -Eq '^[0-9]+$'; then

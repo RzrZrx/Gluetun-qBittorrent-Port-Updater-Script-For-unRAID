@@ -11,6 +11,29 @@ All reported issues have been resolved or are configuration-related.
 
 ## Resolved Issues
 
+### 2. Gluetun API Deadlock on `/v1/portforward` (Reported: 2026-03-08)
+
+**Status:** ✅ Resolved in Script v3.9-F  
+**Affects:** Gluetun `latest` image (March 2026 builds and newer)  
+**Detailed Report:** [gluetun-api-deadlock-portforward.md](responses/gluetun-api-deadlock-portforward.md)
+
+**Symptoms:**
+- Error: `ERROR: Could not retrieve forwarded port from Gluetun`
+- `curl` times out on `GET /v1/portforward` (timeout always matches `CURL_TIMEOUT` exactly)
+- `GET /v1/publicip/ip` works instantly
+
+**Root Cause:**
+Lock inversion (self-deadlock) in newer Gluetun versions. The port forwarding goroutine holds a lock while running the up-command script. When the script calls back into `GET /v1/portforward`, the HTTP handler needs the same lock — deadlock.
+
+**Resolution:**
+Script v3.9-F reads the port from `/tmp/gluetun/forwarded_port` (file-first strategy) instead of calling the API. The API is kept as a fallback for manual runs.
+
+**Additional Fix:** Added `.gitattributes` to enforce LF line endings on `*.sh` files, preventing "not found" errors from Windows CRLF line endings in Alpine Linux containers.
+
+---
+
+## Previously Resolved Issues
+
 ### 1. Authentication Error - Cannot Retrieve Port (Reported: 2026-01-01)
 
 **Status:** ✅ Resolved - User Configuration Issue  
@@ -85,4 +108,4 @@ When reporting:
 
 ---
 
-*Last updated: 2026-01-15*
+*Last updated: 2026-03-08*
