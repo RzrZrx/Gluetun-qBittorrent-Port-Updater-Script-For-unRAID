@@ -1,10 +1,11 @@
 #!/bin/sh
 ###############################################################################
 # Gluetun -> qBittorrent Listening Port Auto-Updater
-# Version: 3.9-F (File-First Port Reading)
+# Version: 3.10 (File-First Port Reading)
 #
 # Created by:     RzrZrx (https://github.com/RzrZrx)
 # Unraid user:    Zerax (https://forums.unraid.net/profile/176709-zerax)
+# Contributor:    ddavidtran (https://github.com/ddavidtran) - qBittorrent 5.x login fix
 #
 # Repository:     https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID
 #
@@ -19,7 +20,7 @@
 #                 - File-first port reading (avoids API deadlock on newer Gluetun)
 ###############################################################################
 
-SCRIPT_VERSION="3.9-F"
+SCRIPT_VERSION="3.10"
 
 ###############################################################################
 # USER CONFIGURATION
@@ -117,14 +118,18 @@ qb_login() {
     rm -f "$COOKIE_FILE"
 
     # Perform login and store cookies in jar
-    LOGIN_RESPONSE=$(curl -fsS --max-time "$CURL_TIMEOUT" \
+    # Note: qBittorrent 4.6+/5.x returns HTTP 204 with empty body instead of "Ok."
+    # so we detect success by the presence of a QBT_SID cookie (version-agnostic)
+    # Fix contributed by u/ddavidtran
+    curl -sS --max-time "$CURL_TIMEOUT" \
+        -o /dev/null \
         --cookie-jar "$COOKIE_FILE" \
         --header "Referer: $QB_HOST" \
         --data-urlencode "username=$QB_USER" \
         --data-urlencode "password=$QB_PASS" \
-        "$QB_HOST/api/v2/auth/login")
+        "$QB_HOST/api/v2/auth/login"
 
-    if [ "$LOGIN_RESPONSE" = "Ok." ]; then
+    if [ -f "$COOKIE_FILE" ] && grep -q "QBT_SID" "$COOKIE_FILE"; then
         return 0
     fi
     return 1

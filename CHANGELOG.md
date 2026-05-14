@@ -23,6 +23,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.10] - 2026-05-14
+
+### Fixed
+- **qBittorrent 5.x Login Failure:** qBittorrent 4.6+/5.x changed `/api/v2/auth/login` from returning `"Ok."` (HTTP 200) to an empty body (HTTP 204 No Content). The `qb_login()` function now detects success by the presence of a `QBT_SID` cookie in the cookie jar instead of checking the response body. This is version-agnostic and works with both old and new qBittorrent versions. (Fix by u/ddavidtran)
+
+### Changed
+- Bumped version from `3.9-F` to `3.10`
+- Removed `-f` (fail silently) flag from login curl call to prevent suppression of HTTP 204 responses
+- Added `-o /dev/null` to discard response body explicitly
+
+---
+
 ## [3.9-F] - 2026-03-08
 
 ### Fixed
@@ -63,5 +75,6 @@ Previous versions are available in the `deprecated/` directory for reference.
 ---
 
 [Unreleased]: https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/compare/main...HEAD
+[3.10]: https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/releases/tag/v3.10
 [3.9-F]: https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/releases/tag/v3.9-F
 [3.8-T]: https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/releases/tag/v3.8-T

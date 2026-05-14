@@ -1,7 +1,7 @@
 # Gluetun qBittorrent Port Synchronization Script
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-3.8--T-blue.svg)](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/releases)
+[![Version](https://img.shields.io/badge/version-3.10-blue.svg)](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID/releases)
 [![Platform](https://img.shields.io/badge/platform-Docker%20%7C%20Unraid-orange.svg)](https://github.com/RzrZrx/Gluetun-qBittorrent-Port-Updater-Script-For-unRAID)
 
 ## Introduction
@@ -19,7 +19,7 @@ This ensures qBittorrent is always configured to use the correct, currently acti
 
 ## Quick Links
 
-*   **Script:** [`update_qbittorrent_listening_port.sh`](script/update_qbittorrent_listening_port.sh) *(v3.8-T)*
+*   **Script:** [`update_qbittorrent_listening_port.sh`](script/update_qbittorrent_listening_port.sh) *(v3.10)*
 *   **Installation Guide:** [Setup Documentation](docs/installation/setup-gluetun-qbittorrent-port-sync.md)
 *   **Additional Guides:**
     *   [Setup qBittorrent on Unraid 6](docs/installation/setup-qbittorrent-unraid-6.md)

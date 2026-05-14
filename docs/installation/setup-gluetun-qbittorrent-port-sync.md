@@ -2,7 +2,7 @@
 
 ## Gluetun to qBittorrent Port Sync
 
-**Version:** 3.8-T  
+**Version:** 3.10  
 **Platform:** Docker / Unraid / Alpine Linux
 
 This script automates the process of updating qBittorrent's listening port when using **Gluetun VPN** with dynamic port forwarding. It fetches the forwarded port from the Gluetun API and updates the qBittorrent preferences via its WebUI API.
