@@ -24,6 +24,40 @@ This script automates the process of updating qBittorrent's listening port when 
 *   Your VPN provider must support port forwarding, and it must be enabled in the settings.
     (Tested with PIA (Private Internet Access)
 
+> ⚠️ **Important: Not All VPN Server Regions Support Port Forwarding**
+>
+> Some VPN providers only support port forwarding on specific servers or regions. For example, **PIA does not support port forwarding on UK servers**. If port forwarding fails silently or the script cannot retrieve a forwarded port, try switching to a different region.
+>
+> **Known working regions (PIA):** US, Canada, Netherlands, Switzerland, Sweden, Romania, Israel
+>
+> **Known non-working regions (PIA):** UK, Australia
+>
+> For other providers, consult your VPN provider's documentation or use the commands below to check.
+
+### Finding Available VPN Servers
+
+You can list all available servers for your VPN provider using the Gluetun CLI. This helps you find servers that support port forwarding.
+
+**List servers in a table:**
+```bash
+docker run --rm -v /mnt/user/appdata/gluetun:/gluetun qmcgaw/gluetun format-servers -private-internet-access
+```
+
+Replace `-private-internet-access` with your provider (e.g., `-protonvpn`, `-mullvad`).
+
+**Save the output to a file** for easier reading:
+```bash
+docker run --rm -v /mnt/user/appdata/gluetun:/gluetun qmcgaw/gluetun format-servers -private-internet-access --output=/gluetun/servers-list.md
+```
+
+**Keep your server list up to date** by adding this variable to Gluetun:
+```
+UPDATER_PERIOD=24h
+```
+This refreshes the servers list every 24 hours through the VPN tunnel.
+
+📖 *For full details, see the [Gluetun VPN Servers Wiki](https://github.com/qdm12/gluetun-wiki/blob/main/setup/servers.md).*
+
 ### Variables to Set
 - `HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH` (Optional – Recommended)
 - `HTTP_CONTROL_SERVER_AUTH_DEFAULT_ROLE` (Optional – Alternative)
