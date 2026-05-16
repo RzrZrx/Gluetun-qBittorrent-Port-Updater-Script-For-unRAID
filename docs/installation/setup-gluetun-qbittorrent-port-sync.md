@@ -50,6 +50,12 @@ Replace `-private-internet-access` with your provider (e.g., `-protonvpn`, `-mul
 docker run --rm -v /mnt/user/appdata/gluetun:/gluetun qmcgaw/gluetun format-servers -private-internet-access --output=/gluetun/servers-list.md
 ```
 
+**Alternative: From the Unraid Terminal** (without creating a new container):
+```bash
+docker exec Gluetun cat /gluetun/servers.json | jq '.[] | .region' | sort -u
+```
+This lists all available regions from your current server data. Replace `Gluetun` with your container name if different.
+
 **Keep your server list up to date** by adding this variable to Gluetun:
 ```
 UPDATER_PERIOD=24h
